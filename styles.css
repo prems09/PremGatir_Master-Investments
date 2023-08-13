@@ -1,7 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+  }
+  
+  @-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+  }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
+  width: 100%;
 }
 
 .navbar {
@@ -9,7 +23,7 @@ body {
   top: 0;
   width: 100%;
   height: 5rem;
-  backdrop-filter: blur(10px); /* Apply the blur effect */
+  backdrop-filter: blur(15px); /* Apply the blur effect */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,11 +33,142 @@ body {
 .logo img{
 border-radius: 50%;
 margin-left: 2rem;
-height: 90px;
+height: 69px;
 }
 .navbar ul{
     display: flex;
-    margin-right: 55%;
+    margin-right: 40%;
+}
+@media only screen and (max-width:820px) {
+    .navbar ul{
+        display: none;
+    }
+    .dropbtn{
+        display: none;
+    }
+    .maincontent{
+        display: block;
+    }
+    .mainhead{
+        font-size: 5vh;
+        width: auto;
+    }
+    .banner_player1{
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    .banner_player2{
+        margin-bottom: 2.3rem;
+        margin-left: -11rem;
+    }
+    .banner_player3{
+        margin-bottom: 3.5rem;
+        margin-left: -12rem;
+    }
+    .mediacontainer{
+        flex-wrap: wrap;
+        width: 78vh;
+        margin-left:10rem;
+    }
+    .media{
+        width: 50vh;
+        height: 124px;
+    }
+    .cardmain{
+        width: 63vh;
+        margin-left: 5rem;
+    }
+    .cards{
+        font-size: 15px;
+        display: block;
+        width: 83vh;
+        margin-left: 6rem;
+        padding: 0;
+    }
+    .pases{
+        margin-top: 4rem;
+        width: 85vh;
+        
+    }
+    .card{
+        width: 78vh;
+        height: auto;
+    }
+    .pases2{
+        width: 75vh;
+        margin-top: 4rem;
+    }
+    .calitem img{
+        width: 23rem;
+    }
+    .banner2{
+        margin-left: 0;
+        width: 100vh;
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 4rem;
+    }
+    .banner2head{
+        width: 0;
+    }
+    .fundmain{
+        
+        margin-left: 5rem;
+        width: 85vh;
+        margin-top: 4rem;
+    }
+    .fundcard{
+        width: auto;
+    }
+    .market{
+        width: 96vh;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+    .bigbtn{
+        margin-left: 28%;
+    }
+    .clubcontainer{
+        width: 80vh;
+        margin-left: 4rem;
+        margin-top: 4rem;
+        
+     }
+     .set{
+        width:unset;
+     }
+     #ahora{
+        padding: 1rem 6rem;
+        margin-left: 53vw;
+     }
+     .faq{
+        margin-bottom: 4rem;
+        width: 92vh;
+     }
+     .community{
+        width: 94vh;
+     }
+     .cmt-btn{
+        width:100vh; 
+    }
+    .banner3{
+        display: unset;
+        margin-top: 7rem;
+        margin-left: 7rem;
+        width: 87vh;
+        margin-bottom:2rem;
+      }
+      .line{
+        width: 100vh;
+      }
+      .lastrow{
+        width: 100vh;
+      }
+      .rightfoot{
+        margin-left: 0;
+      }
+
 }
 .navbar ul li{
     color: white;
@@ -37,13 +182,15 @@ height: 90px;
     border-radius: 20px;
     text-decoration: none;
 }
-.logo img {
-  height: 40px;
+.navbar ul li a:hover{
+   color: #64c883;
 }
+
 
 .dropdown {
   position: relative;
   color: aliceblue;
+  margin-right: 5rem;
 }
 
 .dropbtn {
@@ -53,15 +200,15 @@ height: 90px;
   position: relative;
   color:white ;
   font-weight: 900;
-    font-size: 1.7rem;
+    font-size: 1rem;
 
 }
 .dropbtn::after { /* Add the arrow indicator */
     content: 'ES''\25BE'; /* Unicode character for down arrow */
     position: absolute;
     top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+    right: 2rem;
+    transform: translateY(-60%);
   }
 
 .dropdown-content {
@@ -71,6 +218,7 @@ height: 90px;
   backdrop-filter: blur(10px); /* Apply the blur effect */
   min-width: 160px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
 }
 
 .dropdown-content a {
@@ -83,7 +231,20 @@ height: 90px;
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+#check{
+    display: none;
+}
+#checkbtn{
+    display: none;
+    float: right;
+    height: 92px;
+    cursor: pointer;
+}
+@media (max-width:820px) {
+#checkbtn{
+    display: block;
+}
+}
 .content {
   
   width: 100%;
@@ -118,7 +279,7 @@ height: 90px;
 .mainhead{
     font-family: Integral CF;
     color: #fff;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 130%;
     /* letter-spacing: .05em; */
     font-weight: 900;
@@ -150,31 +311,32 @@ height: 90px;
 .playerbanner{
     align-self: flex-end;
     overflow: visible;
-    position: absolute;
+    position: unset;
     right: 0;
-    height: 100%;
-    width: 60%;
+    height: 50%;
+        margin-bottom: -6rem;
+   
 
 }
 .banner_player1{
     z-index: 1;
     right: 400px;
-    position: absolute;
-    margin-top:28.7rem ;
+    margin-left: 5rem;
+    height: 30rem;
 }
 .banner_player2{
     z-index: 2;
-   right: 239px;
-    height: 24rem;
-    position: absolute;
-    margin-top: 25.2rem;
+    height: 30rem;
+    margin-bottom: 1.3rem;
+    margin-left: -8rem;
 
 }
 .banner_player3{
-    position: absolute;
-    margin-top: 27.8rem;
-
+    margin-left: -10rem;
     right: 0;
+    margin-bottom: 1.5rem;
+    position: initial;
+    height: 30rem;
 }
 .legend{
     display: flex;
@@ -189,7 +351,7 @@ height: 90px;
 }
 .legendtext{
     
-    position: relative;
+    position:relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -212,7 +374,7 @@ height: 90px;
 }
 .mainmedia{
     color: #fff;
-    max-width: 1440px;
+    max-width: 100vw;
     padding-bottom: 60px;
     margin-left: 2.5rem;
     margin-top: 5rem;
@@ -220,6 +382,7 @@ height: 90px;
 .mediacontainer{
     display: flex;
     gap: 26.5px;
+    margin-top: 2rem;
 }
 .mainmedia h1{
     text-align: center;
@@ -229,9 +392,9 @@ height: 90px;
     max-height: 39px;
 }
 .media{
-    position: relative;
+    position: static;
     width: 100%;
-    height: 70px;
+    height: 58px;
     top: 0;
     display: flex;
     flex-flow: row nowrap;
@@ -267,7 +430,7 @@ height: 90px;
     border: 1px solid grey;
     border-radius: 20px;
     padding:1rem;
-    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .card h1{
     font-weight: 600
@@ -307,7 +470,7 @@ height: 90px;
 }
 .banner2{
     margin-left: 4rem;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     font-size: 1.5rem;
     color: #fff;
@@ -319,6 +482,7 @@ height: 90px;
 
 .banner2head{
     width: 70%;
+    font-size:xx-large;
 }
 
 .banner2 img{
@@ -352,6 +516,9 @@ height: 26rem;
     display: flex;
     overflow-x: scroll;
     padding: 20px;
+  }
+  .scrolling-cards::-webkit-scrollbar{
+    width: 0;
   }
   
   .scard {
@@ -409,6 +576,7 @@ height: 26rem;
     margin-left: 35%;
     color: #fff;
     border: none;
+    margin-top: 4rem;
  }
  .clubcontainer{
     color: white;
@@ -526,10 +694,12 @@ align-items: center;
 
 .rightfoot{
     color: #c3bfbf;
-    margin-left: 34rem;
+    margin-left: 30rem;
 }
 .rightfoot img{
-    height:50px ;
+    height:37px ;
+    padding: 3px;
+    border-radius: 0;
 }
   
   

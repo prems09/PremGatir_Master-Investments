@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rDVPnh4ZHRroiRmzPg38H3sAg3M8jpfYB4RD1BtwPAuslSv4e68sRlVc2t2JJ4V" crossorigin="anonymous">
 
-  <title>Blurred Sticky Navbar</title>
+  <title>Master Investment</title>
 </head>
 <body>
   <div class="navbar">
@@ -22,6 +21,10 @@
 
   </ul>
     <div class="dropdown">
+        <input type="checkbox" id="check">
+        <label for="check"><i><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="checkbtn">
+           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+         </svg></i></label>
       <button class="dropbtn"></button>
       <div class="dropdown-content">
         <a href="#">EN</a>
@@ -61,7 +64,7 @@
             apoya al club y a los jugadores para que todos triunfen.
         </p>
         <span>Pablo “Pitu” Barrientos - Ex jugador</span>
-        <img src="wheat.svg" alt="" style="transform: rotateY(180deg);">
+        <img src="wheat.svg" alt="" transform: "scale(-1,1)" style="transform:scaleX(-1);">
 
      </section>
     </section>
@@ -253,7 +256,9 @@
         <p>¿Necesito crear una cuenta para poder comprar tokens?</p>
         <br>
     </section>
-    <div style="margin: 4rem;">
+    <div style="margin: 4rem; @media 820px {
+        width:100vh;
+    }">
         <button class="bigbtn">VER MÁS PREGUNTAS</button>
     </div>
     <div class="community">
@@ -268,7 +273,7 @@
         </section>
         <section class="cmt-btn">
             <h1>#Everybody<b>WINs</b></h1>
-            <button class="bigbtn" style="margin-left: 0;">INGRESAR AL CANAL</button>
+            <button class="bigbtn" style="margin-left: 0;margin-top: 0.5rem;">INGRESAR AL CANAL</button>
         </section>
         <section class="cmt-img"><img src="discord.png" alt=""></section>
     </div>
@@ -316,7 +321,7 @@
              <img src="chile.png" alt="">
              <img src="flag.png" alt="">
              <img src="brazil.png" alt="">
-             <img src="spain" alt="">
+             <img src="spain.png" alt="">
              <img src="italy.png" alt="">
     
             </span>
